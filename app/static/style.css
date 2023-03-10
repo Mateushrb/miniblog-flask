@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto&display=swap');
+
+@import './styles/_header.css';
+@import './styles/_main.css';
+@import './styles/_footer.css';
+@import './styles/formulario.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.container_main {
+    width: 800px;
+    margin: auto;
+}
+
+body {
+    background-color: #d6c292;
+}
+
+.usuarioLogado {
+    width: 540px;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 380px) {
+    .container_main {
+        width: 300px;
+    }
+    figcaption {
+        display: none;
+    }
+
+}

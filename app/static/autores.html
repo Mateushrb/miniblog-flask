@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+	<main class="container_main">
+		<h1>Mini-blog</h1>
+		<section>
+			<ul id="postagens">
+				{% for a in autores %}
+				<li>
+                    <div class="infoAutores">
+                        <p>Nome: {{ a.nome }}</p>
+                        <p>Idade: {{ a.idade }}</p>
+                        <p>Bairro: {{ a.bairro }}</p>
+                    </div>
+                    <div>
+                        <p>Biografia: {{ a.biografia }}</p>
+                    </div>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</main>
+{% endblock %}

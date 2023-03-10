@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <main>
+        <h1 class="title">Minha conta</h1>
+        {% if current_user.is_authenticated %}
+		<p class="usuarioLogado">Atualize seus dados, {{ current_user.name }}.</p>
+	    {% endif %}
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="usuarioLogado">
+                    <ul>
+                    {% for message in messages %}
+                        <li> {{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form class="formulario" method="POST">
+            <div class="divLogin">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="{{ current_user.name }}">
+            </div>
+            <div class="divLogin">
+                <label for="idade">Idade</label>
+                <input type="text" name="idade" id="idade" value="{{ current_user.idade }}">
+            </div>
+            <div class="divLogin">
+                <label for="bairro">Bairro</label>
+                <input type="text" name="bairro" id="bairro" value="{{ current_user.bairro }}">
+            </div>
+            <div class="divLogin">
+                <label for="biografia">Biografia</label>
+                <textarea name="biografia" id="biografia" rows="4" cols="20">{{ current_user.biografia }}</textarea>
+            </div>
+            <div class="divBtn">
+                <input type="submit" value="Atualizar dados" class="atualizarDados" id="atualizarDados">
+            </div>
+        </form>
+    </main>
+    <style>.conta{color: #000000}</style>
+{% endblock %}

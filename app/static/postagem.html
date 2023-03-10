@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<main class="container_main">
+    <h1>Fazer postagem</h1>
+    {% if current_user.is_authenticated %}
+		<p class="usuarioLogado">Faça sua postagem, {{ current_user.name }}.</p>
+	{% endif %}
+    <form class="formulario" method="POST">
+        <div class="divLogin">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo">
+        </div>
+        <div class="divLogin">
+            <label for="texto">Texto</label>
+            <textarea name="texto" id="texto" rows="4" cols="20"></textarea>
+        </div>
+        <div class="divBtn">
+            <input type="submit" value="Publicar" class="atualizarDados" id="publicar">
+        </div>
+    </form>
+</main>
+<style>.postar{color: #000000}</style>
+<script src="{{ url_for('static', filename='./scripts/postar.js') }}"></script>
+{% endblock %}

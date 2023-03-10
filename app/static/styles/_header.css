@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b59e67;
+    width: 100% !important;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 1rem !important;
+}
+figure {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+@media screen and (max-width: 380px) {
+    .logo {
+        width: 100px;
+    }
+    .buttons {
+        text-align: right;
+        padding-top: 10px;
+    }
+}

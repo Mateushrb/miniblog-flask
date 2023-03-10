@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<main class="container_main">
+    <h1 class="title">Crie sua conta agora mesmo</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div>
+                <ul>
+                {% for message in messages %}
+                    <li> {{ message }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="divForm">
+        <form class="formulario" action="/criar_conta" method="POST" id="formCriaConta">
+            <div class="divLogin">
+                <label for="user">Usuário</label>
+                <input type="text" name="user" id="login" class="usuario">
+            </div>
+            <div class="divSenha">
+                <label for="senha">Senha</label>
+                <input type="password" name="pass" id="password" class="senha">
+            </div>
+            <div class="divSenha">
+                <label for="conf">Confirme sua senha</label>
+                <input type="password" name="conf" class="senha" id="passConf">
+            </div>
+            <div class="divSenha">
+                <label for="token">Token de criação</label>
+                <input type="text" name="token" class="senha" id="token">
+            </div>
+            <div class="divBtn">
+                <input type="button" value="Criar conta" class="criarConta" id="btnCriar">
+            </div>
+        </form>
+    </div>
+</main>
+<script src="{{ url_for('static', filename='./scripts/criarConta.js') }}" defer></script>
+{% endblock %}

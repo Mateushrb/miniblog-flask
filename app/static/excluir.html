@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<main class="container_main">
+    <h1>Editar postagem</h1>
+    {% if current_user.is_authenticated %}
+		<p class="usuarioLogado">Exclua uma postagem, {{ current_user.name }}.</p>
+	{% endif %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="usuarioLogado">
+                <ul>
+                {% for message in messages %}
+                    <li> {{ message }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form class="formulario" method="POST" id="formExcluir">
+        <div class="divLogin">
+            <label for="id_postagem">Número da postagem</label>
+            <input type="text" name="id_postagem" id="id_postagem" readonly=“true”>
+        </div>
+        </div>
+        <div class="divBtn">
+            <input type="button" value="Excluir" class="atualizarDados" id="excluir">
+        </div>
+    </form>
+</main>
+<script src="{{ url_for('static', filename='./scripts/excluir.js') }}"></script>
+{% endblock %}

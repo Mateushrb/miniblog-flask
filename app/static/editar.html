@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<main class="container_main">
+    <h1>Editar postagem</h1>
+    {% if current_user.is_authenticated %}
+		<p class="usuarioLogado">Edite uma postagem, {{ current_user.name }}.</p>
+	{% endif %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="usuarioLogado">
+                <ul>
+                {% for message in messages %}
+                    <li> {{ message }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form class="formulario" method="POST" id="formEditar">
+        <div class="divLogin">
+            <label for="id_postagem">Número da postagem</label>
+            <input type="text" name="id_postagem" id="id_postagem" readonly=“true”>
+        </div>
+        <div class="divLogin">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo">
+        </div>
+        <div class="divLogin">
+            <label for="texto">Texto</label>
+            <textarea name="texto" id="texto" rows="4" cols="20"></textarea>
+        </div>
+        <div class="divBtn">
+            <input type="button" value="Atualizar" class="atualizarDados" id="atualizar">
+        </div>
+    </form>
+</main>
+<script src="{{ url_for('static', filename='./scripts/editar.js') }}"></script>
+{% endblock %}

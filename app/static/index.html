@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+	<main class="container_main">
+		<h1>Mini-blog</h1>
+		{% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="usuarioLogado">
+                    <ul>
+                    {% for message in messages %}
+                        <li> {{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endwith %}
+		<section>
+			<ul id="postagens">
+				{% for p in postagens %}
+				<li>
+					<div>
+						<div class="post">
+							<h3>{{ p.titulo }}</h3>
+							{% if current_user.is_authenticated and current_user.user_id == p.autor_id %}
+							<div>
+								<input type="button" value="Excluir" class="btnEntrar" id="btnExcluir">
+								<input type="button" value="Editar" class="btnEntrar" id="btnEditar">
+							</div>
+							{% endif %}
+						</div>
+						<p>{{ p.texto }}</p>
+					</div>
+					<div class="autor">
+						<p>Autor: <a href="/autores">{{ p.autor }}</a></p>
+						<p>Post número: <span>{{ p.id }}</span></p>
+						<p>Data: <span>{{ p.data }}</span></p>
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</main>
+	<script src="{{ url_for('static', filename='./scripts/editar_posts.js') }}" defer></script>
+{% endblock %}

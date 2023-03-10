@@ -1,0 +1,127 @@
+.title {
+    text-align: center;
+}
+
+.formulario {
+    text-align: center;
+    width: 20rem;
+    margin: auto;
+    justify-content: space-between;
+    border: 1px solid #5e5a54;
+    border-radius: 10px;
+    padding: 1rem 0;
+    background-color: #ecdfbe;
+}
+
+.divLogin{
+    width: 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .7rem;
+}
+
+.divSenha {
+    width: 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .8rem;
+}
+
+.divBtn {
+    width: 12rem;
+    height: 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+#login {
+    height: 1.5rem;
+    margin-top: 0.4rem;
+}
+
+.senha {
+    height: 1.5rem;
+    margin-top: .4rem;
+}
+
+.divMostrarSenha {
+    height: 3rem;
+}
+
+#mostrarSenha {
+    width: 6.5rem;
+    padding: 0.4rem;
+    padding-bottom: 0.45rem;
+    margin-bottom: 1rem;
+    background-color: #b59e67;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.criarConta {
+    width: 5rem;
+    padding: 0.4rem;
+    padding-bottom: 0.45rem;
+    background-color: #b59e67;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.atualizarDados {
+    padding: 0.4rem;
+    padding-bottom: 0.45rem;
+    background-color: #b59e67;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff; 
+}
+
+#btnEntrar {
+    width: 5rem;
+    padding: 0.4rem;
+    padding-bottom: 0.45rem;
+    background-color: #b59e67;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+#mostrarSenha:hover, #btnEntrar:hover, .criarConta:hover, .atualizarDados:hover {
+    transition: 0.2s;
+    background-color: #d6c292;
+    color: #000000;
+    border: 1px solid #b59e67;
+    cursor: pointer;
+}
+
+#mostrarSenha:active, #btnEntrar:active, .criarConta:active, .atualizarDados:active {
+    background-color: #b59e67;
+    transition: 0s;
+}
+
+.btnEntrar {
+    width: 5rem;
+    padding: 0.4rem;
+    background-color:#d6c292;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.btnEntrar:hover {
+    transition: 0.2s;
+    background-color: #fff1cf;
+    color: #000000;
+    border: 1px solid #d6c292;
+    cursor: pointer;
+}
+
+.btnEntrar:active {
+    transition: 0s;
+    background-color: #d6c292;
+}
