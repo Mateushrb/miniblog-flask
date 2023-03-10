@@ -5,11 +5,11 @@ Projeto realizado para obtenção do certificado do **Curso de Introdução a Pr
 
 Para rodar o projeto é necessário ter instalado as ferramentas abaixo
 
-> Linguagem de Programação: Python
+> Linguagem de Programação: ```Python```
 
-> Framework: Flask
+> Framework: ```Flask```
 
-> Dependências do framwork: FlaskWTF e Flask-login
+> Dependências do framwork: ```FlaskWTF``` e ```Flask-login```
 
 Depois de ter todos os requisitos instalados, é necessário executar o arquivo ```microblog.py```
 
