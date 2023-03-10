@@ -13,7 +13,7 @@ Para rodar o projeto é necessário ter instalado as ferramentas abaixo:
 
 Depois de ter todos os requisitos instalados, é necessário executar o arquivo ```microblog.py```
 
-Para criar uma conta é necessário utilizar o seguinte token de criação: ```2482```
+Para criar uma conta é necessário utilizar o seguinte token de criação: ```2482```<br>
 O token pode ser alterado no arquivo ```routes.py``` na linha ```103```
 
 Para mais informações sobre o [Python clique aqui](https://www.python.org/)<br>
