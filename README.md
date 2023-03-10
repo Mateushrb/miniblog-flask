@@ -3,7 +3,7 @@
 Projeto realizado para obtenção do certificado do **Curso de Introdução a Programação com Python + WEB**, realizado pela Universidade Federal de Santa Catarina.
 
 
-Para rodar o projeto é necessário ter instalado as ferramentas abaixo
+Para rodar o projeto é necessário ter instalado as ferramentas abaixo:
 
 > Linguagem de Programação: ```Python```
 
